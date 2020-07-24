@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #252525;
+  --form-bg-color: #fc6600;
+  --input-bg-color: #f9812a;
+  --text-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  background: var(--main-bg-color);
+}
+
+.app-heading {
+  color: #252525;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.form-wrapper {
+  background: #edf3f3;
+  width: 500px;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.results {
+  padding: 1rem 0;
+}
+
+.results .emptyList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.upperText, .lowerText {
+    color: #252525;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+.results .load {
+  text-align: center;
+}
+
+.results .list {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.list .list-item{
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.remove-item {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.remove-item i {
+  color: red;
+  cursor: pointer;
+}
+
+form {
+  background: var(--form-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  position: relative;
+}
+
+form input {
+  width: 90%;
+  margin: 1rem 0;
+  background: var(--input-bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  height: 48px;
+  width: 48px;
+  transform: translate(0, -50%);
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle .plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #353535;
+  font-size: 1.2rem;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::placeholder {
+  color: var(--text-color);
+  opacity: 1;
+}
+
+
+@media(max-width: 600px) {
+  .app-heading{
+    padding: 1rem 0;
+    margin: 0;
+  }
+  .form-wrapper {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .results{
+    height: 76.4vh;
+    overflow: scroll;
+    padding: 0;
+  }
+
+  .results .emptyList {
+    /* height: 75vh; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  form {
+    border-radius: 0;
+    /* margin-top: 60.5vh; */
+  }
+}
